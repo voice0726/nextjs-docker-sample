@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  docker_sample_backend:
+    build:
+      context: backend
+    container_name: docker_sample_backend
+    ports:
+      - 127:0:0:1:4000:4000
+  docker_sample_frontend:
+    build:
+      context: frontend
+    container_name: docker_sample_frontend
+    ports:
+      - 127:0:0:1:3000:3000
