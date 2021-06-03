@@ -1,14 +1,22 @@
 version: "3.7"
+
+networks:
+  docker_sample_network:
+    external: true
+
 services:
   docker_sample_backend:
     build:
       context: backend
     container_name: docker_sample_backend
-    ports:
-      - 127:0:0:1:4000:4000
+    networks:
+      - docker_sample_network
   docker_sample_frontend:
     build:
       context: frontend
     container_name: docker_sample_frontend
     ports:
-      - 127:0:0:1:3000:3000
+      - 127.0.0.1:3000:3000
+    networks:
+      - docker_sample_network
+
