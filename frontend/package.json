@@ -17,6 +17,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "next": "latest",
+    "raw-body": "^2.4.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
